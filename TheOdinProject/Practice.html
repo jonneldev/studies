@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    console.log("Hello, World!")
+
+    /* Write a function called add7 that takes one number and returns that number + 7.
+     */
+    function add7(number) {
+        return number + 7
+    }
+
+    function multiply(num1, num2) {
+        return num1 * num2
+    }
+
+    let capitalize = (a) => {
+        return `${a.charAt(0).toUpperCase()}${a.slice(1).toLowerCase()}`;
+    }
+
+    let lastLetter = (a) => {
+        return a.slice(-1)
+    }
+
+    /*
+    When a user inputs a number
+    Loop from 1 to the entered number
+    If the current number is divisible by 3 then print "Fizz"
+    If the current number is divisible by 5 then print "Buzz"
+    If the current number is divisible by 3 and 5 then print "FizzBuzz"
+    Otherwise print the current number
+    */
+
+    let answer = parseInt(prompt("Please enter a nunber you would like to FizzBuzz up to: "));
+
+    for (let i = 1; i <= answer; i++) {
+        if ((i % 3 === 0) && (i % 5 ===0))  {
+            console.log("FizzBuzz");
+        }else if (i % 3 === 0) {
+            console.log("Fizz");
+        }else if (i % 5 === 0) {
+            console.log("Buzz");
+        }else console.log(i);
+    }
+
+
+  </script>
+</body>
+</html>
