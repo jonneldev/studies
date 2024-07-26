@@ -26,7 +26,8 @@
 
   </body>
   <script>
-    const name = 'Mustafa';
+
+    const name = prompt('Search name..');
     const para = document.createElement('p');
 
     const phonebook = [
@@ -41,6 +42,13 @@
     ]
 
     // Add your code here
+    for (const contact of phonebook) {
+        if (contact.name === name) {
+            para.textContent = `${contact.name}: 
+            ${contact.number}`;
+            break;
+        }
+    }
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
